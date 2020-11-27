@@ -95,13 +95,13 @@ cudaEventSynchronize(stop);
 //Copy from device to host
 cudaMemcpy(C, C_d, sizeof(*C)*memorySize, cudaMemcpyDeviceToHost);
 
-////Print result
-//for (int i = 0; i < N + 2; i++) {
-//	for (int j = 0; j < N + 2; j++) {
-//		printf("%d ", C(i, j));
-//	}
-//	printf("\n");
-//}
+//Print result
+// for (int i = 0; i < N + 2; i++) {
+// 	for (int j = 0; j < N + 2; j++) {
+// 		printf("%d ", C(i, j));
+// 	}
+// 	printf("\n");
+// }
 
 //Free memory
 cudaFree(C_d);
@@ -110,6 +110,6 @@ free(C);
 
 float milliseconds = 0;
 cudaEventElapsedTime(&milliseconds, start, stop);
-printf("%f", milliseconds);
+printf("Time taken by GPU: %f ms", milliseconds);
 return EXIT_SUCCESS;
 }
