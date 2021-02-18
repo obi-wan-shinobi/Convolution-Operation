@@ -1,0 +1,27 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{../figures/}}
+
+\begin{document}
+\input{title}
+
+\tableofcontents
+\newpage
+
+\section{Problem Statement}
+
+\hspace*{0.25 in}In mathematics (in particular, functional analysis), convolution is a mathematical operation on two functions (f and g) that produces a third function $f * g$ that expresses how the shape of one is modified by the other. The term convolution refers to both the result function and to the process of computing it. It is defined as the integral of the product of the two functions after one is reversed and shifted. And the integral is evaluated for all values of shift, producing the convolution function.
+
+\subsection{Objectives}
+\begin{itemize}
+	\item To implement a convolution operation over two 2-dimensional matrices using CuDA
+	\item Understand the CuDA architecture and the CuDA kernel
+\end{itemize}
+
+\section{Introduction}
+	The convolution of $f$ and $g$ is written $f*g$, denoting the operator with the symbol *. It is defined as the integral of the product of the two functions after one is reversed and shifted. As such, it is a particular kind of integral transform:
+	$$
+		(f*g)(t) = \int_{-\infty}^{\infty} f(\tau ) g(t- \tau)
+	$$
+\end{document}

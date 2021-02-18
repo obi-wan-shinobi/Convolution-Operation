@@ -2,3 +2,7 @@
 *.exp 
 *.lib 
 *.out
+*.aux
+*.log
+*.gz
+*.toc
